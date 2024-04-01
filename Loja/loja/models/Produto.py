@@ -1,6 +1,6 @@
 #loja/models/Produto.py parte 1:
 from loja.models import *
-    class Produto(models.Model):
+class Produto(models.Model):
     Produto = models.CharField(null=False, max_length=100)
     destaque = models.BooleanField(default=True)
     promocao = models.BooleanField(default=True)
@@ -11,5 +11,6 @@ from loja.models import *
     #loja/models/Produto.py parte 2:
     criado_em = models.DateTimeField(auto_now_add=True)
     alterado_em = models.DateTimeField(auto_now=True)
+    image = models.ImageField(null=True, blank=True)
     def __str__(self):
-    return '{}'.format(self.Produto)
+        return '{}'.format(self.Produto)
